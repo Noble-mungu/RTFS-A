@@ -7,10 +7,10 @@
 ## Simulate Data
 Generate 100 customers' information and save it to customer.csv. Generate over 10,000 transaction records and save them to transaction_training.csv. Data Import
 
-Use a Spark SQL job to retrieve data from CSV files and import them into a Mongo/Cassandra database.
+Use a Spark SQL job to retrieve data from CSV files and import them into a Cassandra database.
 
 ## Model Training
-Run a Spark ML job to read data from Mongo/Cassandra
+Run a Spark ML job to read data from Cassandra
 Train models (Preprocessing and Random Forest) to classify transactions as fraud or non-fraud. Save the trained models to the file system. Real-Time Processing
 
 ## Start a Spark Streaming job to:
