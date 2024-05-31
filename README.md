@@ -18,7 +18,7 @@ Load ML models. Consume credit card transactions from Kafka. Create a Kafka topi
 
 Use Spring Boot to create a dashboard displaying fraud and non-fraud transactions in real-time.
 
-## Flask to create REST APIs to:
+## Scala to create REST APIs to:
 Retrieve customer information. Create transaction statements for each customer.
 
 ## Implementation Details
@@ -47,6 +47,6 @@ Spark ML loads data from fraud and non-fraud tables. Data undergoes transformati
 The front-end dashboard class is designed with Spring Bot framework that would select fraud and non-fraud transactions from Cassandra tables and display it on the dashboard in real-time. This method will call a select query to retrieve the latest fraud and non-fraud transactions that occurred in the last 5 seconds and display it on the dashboard. To display the record only once, the method maintains the max timestamp of previously displayed fraud/non-fraud transactions. And in the current trigger, it would only select those transactions whose timestamp is greater than the previous max timestamp.
 
 ## REST API for customers and transaction statements
-I also design two REST APIs with the Flask framework to easily retrieve the customer information and create transaction statements for customers. They are all implemented by calling SQL queries to select records from the Cassandra non-fraud table.
+I also design two REST APIs with scala to easily retrieve the customer information and create transaction statements for customers. They are all implemented wiht scala to select records from the Cassandra non-fraud table.
 
 For customer information, the endpoint is: /api/customer/<cc_num> which would return basic information for the credit card <cc_num> owner. For creating a transaction statement for the specific customer, the endpoint is: api/statement/<cc_num> which would return all the transaction records for the credit card <cc_num> and order them by transaction time.
